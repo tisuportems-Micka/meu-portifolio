@@ -5,7 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
 
-:root {
+:root, [data-theme="dark"] {
   /* Dynamic Theme Variables (Dark Default) */
   --bg-primary: #0b0f19;
   --bg-secondary: #111827;
@@ -13,12 +13,12 @@
   --bg-glass: rgba(17, 24, 39, 0.75);
   --bg-glass-hover: rgba(31, 41, 55, 0.85);
   
-  --text-main: #f9fafb;
-  --text-muted: #9ca3af;
+  --text-main: #ffffff;
+  --text-muted: #ffffff;
   --text-inverse: #111827;
   
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-glow: rgba(56, 189, 248, 0.3);
+  --border-color: rgba(255, 255, 255, 0.12);
+  --border-glow: rgba(56, 189, 248, 0.4);
   
   /* Brand & Tech Colors */
   --accent-primary: #3b82f6;
@@ -45,6 +45,18 @@
   --radius-lg: 24px;
   
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme="dark"] .text-muted,
+[data-theme="dark"] p,
+[data-theme="dark"] .service-text,
+[data-theme="dark"] .project-description,
+[data-theme="dark"] .tech-card-desc,
+[data-theme="dark"] .nav-link-custom,
+[data-theme="dark"] .mini-pill,
+[data-theme="dark"] .fs-7.text-muted,
+[data-theme="dark"] .filter-btn {
+  color: #ffffff !important;
 }
 
 [data-theme="light"] {
