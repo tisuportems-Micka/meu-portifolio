@@ -151,7 +151,7 @@ function calculateTotal() {
 }
 
 function sendBudgetToWhatsapp() {
-  const phoneNumber = '5511999999999'; // Número personalizável pelo usuário
+  const phoneNumber = '5565999964446'; // WhatsApp Mickael Dias
   let message = `🚀 *Solicitação de Orçamento pelo Portfólio*\n\n`;
   message += `📌 *Tipo de Projeto:* ${selectedProjectType.name}\n`;
   
@@ -184,8 +184,8 @@ function initContactForm() {
       const email = document.getElementById('contactEmail').value;
       const msg = document.getElementById('contactMessage').value;
 
-      const phoneNumber = '5511999999999';
-      const text = `📬 *Mensagem de Contato do Site*\n\n👤 *Nome:* ${name}\n📧 *E-mail:* ${email}\n\n💬 *Mensagem:* ${msg}`;
+      const phoneNumber = '5565999964446';
+      const text = `📬 *Mensagem de Contato do Portfólio*\n\n👤 *Nome:* ${name}\n📧 *E-mail:* ${email}\n\n💬 *Mensagem:* ${msg}`;
       
       window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, '_blank');
       contactForm.reset();

@@ -841,6 +841,59 @@ a {
   border: 2px solid var(--bg-primary);
 }
 
+/* Hero Avatar & Navigation */
+.hero-avatar-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.hero-avatar {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent-primary);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.45);
+  transition: var(--transition);
+}
+.hero-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.6);
+}
+.hero-avatar-badge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  background-color: var(--success);
+  border: 3px solid var(--bg-primary);
+  border-radius: 50%;
+}
+.navbar-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-primary);
+}
+.project-img-wrapper {
+  height: 210px;
+  overflow: hidden;
+  position: relative;
+  background: #0f172a;
+}
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+.tech-badge.badge-node { background: rgba(104, 160, 99, 0.15); color: #68a063; border-color: rgba(104, 160, 99, 0.3); }
+.tech-badge.badge-cloudflare { background: rgba(243, 128, 32, 0.15); color: #f38020; border-color: rgba(243, 128, 32, 0.3); }
 /* Footer */
 .footer-custom {
   background: var(--bg-secondary);
