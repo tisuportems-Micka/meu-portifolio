@@ -38,7 +38,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto me-4 align-items-center">
+        <ul class="navbar-nav ms-auto me-3 align-items-center">
           <li class="nav-item">
             <a class="nav-link nav-link-custom active" href="#hero">Início</a>
           </li>
@@ -52,23 +52,15 @@
             <a class="nav-link nav-link-custom" href="#portfolio">Cases &amp; Projetos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="#calculator">Orçamento</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="#contact">Contato</a>
+            <a class="nav-link nav-link-custom" href="#contato">Contato</a>
           </li>
         </ul>
 
-        <div class="d-flex align-items-center gap-3">
+        <div class="d-flex align-items-center">
           <!-- Theme Toggle Button -->
           <button class="theme-toggle-btn" id="themeToggleBtn" title="Alternar Tema Escuro/Claro">
             <i class="fa-solid fa-sun"></i>
           </button>
-          
-          <!-- CTA WhatsApp -->
-          <a href="https://wa.me/5565999964446?text=Ol%C3%A1%20Mickael!%20Vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" class="btn-custom btn-whatsapp d-none d-sm-inline-flex">
-            <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
-          </a>
         </div>
       </div>
     </div>
@@ -76,7 +68,7 @@
 
   <!-- ==========================================================================
        2. HERO SECTION
-       ========================================================================== -->
+       ========================================================================= -->
   <section id="hero" class="hero-section">
     <div class="container">
       <div class="row align-items-center gy-5">
@@ -97,9 +89,25 @@
             Construo <span class="gradient-text">Sistemas Web, Biometria &amp; Soluções em Nuvem</span>
           </h1>
 
-          <p class="text-muted mx-auto fs-6 mb-4" style="max-width: 720px;">
+          <p class="text-muted mx-auto mb-3" style="font-size: 0.92rem; max-width: 700px; line-height: 1.6;">
             Engenharia de software focada em alta performance, disponibilidade e segurança. Domínio completo de ponta a ponta: desde arquiteturas <strong>PWA Offline-First</strong> e IA no navegador até microsserviços em <strong>Node.js</strong> e bancos relacionais otimizados.
           </p>
+
+          <!-- Barra de Contatos Imediata no Topo -->
+          <div class="hero-contacts-bar">
+            <a href="mailto:gumimds@gmail.com" class="hero-contact-chip" title="Enviar E-mail">
+              <i class="fa-solid fa-envelope"></i> gumimds@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/mickael-soares-97755098" target="_blank" class="hero-contact-chip" title="Ver Perfil LinkedIn">
+              <i class="fa-brands fa-linkedin"></i> in/mickael-soares-97755098
+            </a>
+            <a href="https://wa.me/5565999964446" target="_blank" class="hero-contact-chip" title="Conversar no WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i> (65) 99996-4446
+            </a>
+            <span class="hero-contact-chip" title="Localização">
+              <i class="fa-solid fa-location-dot"></i> Cuiabá / Várzea Grande - MT
+            </span>
+          </div>
 
           <div class="hero-actions justify-content-center">
             <a href="#portfolio" class="btn-custom btn-primary-custom">
@@ -350,7 +358,6 @@
                   <span class="mini-pill">PWA</span>
                   <span class="mini-pill">Cloudflare</span>
                 </div>
-                <a href="https://wa.me/5565999964446?text=Ol%C3%A1%20Mickael!%20Gostaria%20de%20saber%20mais%20sobre%20o%20case%20PontoSmart." target="_blank" class="text-primary fw-semibold fs-7 text-nowrap">Ver case <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -360,7 +367,7 @@
         <div class="col-md-6 col-lg-4 project-item" data-category="systems">
           <div class="glass-card project-card">
             <div class="project-img-wrapper">
-              <img src="assets/project_system.jpg" alt="Portal de Chamados e Helpdesk Corporativo" class="project-img">
+              <img src="assets/project_portal_chamados.png" alt="Portal de Chamados e Helpdesk Corporativo" class="project-img">
               <span class="project-badge-cat">Helpdesk • Service Desk</span>
             </div>
             <div class="project-content">
@@ -378,7 +385,6 @@
                   <span class="mini-pill">PostgreSQL</span>
                   <span class="mini-pill">Bootstrap 5</span>
                 </div>
-                <a href="https://wa.me/5565999964446?text=Ol%C3%A1%20Mickael!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Portal%20de%20Chamados." target="_blank" class="text-primary fw-semibold fs-7 text-nowrap">Ver case <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -387,8 +393,8 @@
         <!-- Project 3: Landing Page TI Suporte MS -->
         <div class="col-md-6 col-lg-4 project-item" data-category="web">
           <div class="glass-card project-card">
-            <div class="project-img-wrapper" style="background: linear-gradient(135deg, #0b0f19, #1e293b); display: flex; align-items: center; justify-content: center; padding: 20px;">
-              <img src="assets/logo_tisuportems.jpg" alt="TI Suporte MS" class="project-img" style="object-fit: contain; max-height: 170px;">
+            <div class="project-img-wrapper">
+              <img src="assets/project_tisuportems.png" alt="TI Suporte MS" class="project-img">
               <span class="project-badge-cat">Web • Alta Conversão</span>
             </div>
             <div class="project-content">
@@ -406,7 +412,6 @@
                   <span class="mini-pill">JavaScript</span>
                   <span class="mini-pill">SEO On-Page</span>
                 </div>
-                <a href="https://wa.me/5565999964446?text=Ol%C3%A1%20Mickael!%20Gostaria%20de%20um%20site%20ou%20landing%20page." target="_blank" class="text-primary fw-semibold fs-7 text-nowrap">Ver detalhes <i class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
@@ -416,119 +421,32 @@
   </section>
 
   <!-- ==========================================================================
-       6. INTERACTIVE BUDGET CALCULATOR (HIGH CONVERSION FEATURE)
+       6. WORK PROCESS / METODOLOGIA
        ========================================================================== -->
-  <section id="calculator" class="section-padding">
+  <section class="section-padding">
     <div class="container">
       <div class="text-center section-header">
-        <span class="section-subtitle">Ferramenta Interativa</span>
-        <h2 class="section-title">Simule o Orçamento do Seu Projeto</h2>
+        <span class="section-subtitle">Metodologia Ágil</span>
+        <h2 class="section-title">Como Funciona Meu Processo</h2>
         <p class="text-muted mx-auto" style="max-width: 600px;">
-          Selecione o tipo de projeto e as funcionalidades desejadas para obter uma estimativa rápida e enviar diretamente para o meu WhatsApp!
+          Engenharia estruturada com previsibilidade, transparência e entregas iterativas em todas as etapas.
         </p>
-      </div>
-
-      <div class="calculator-box">
-        <div class="row g-4">
-          <!-- Step 1: Project Type -->
-          <div class="col-lg-7">
-            <h4 class="mb-3 fs-5"><i class="fa-solid fa-layer-group text-primary me-2"></i> 1. Escolha o Tipo de Projeto</h4>
-            
-            <div class="calc-option-card calc-type-card selected" data-name="Sistema Web / Dashboard" data-price="2500">
-              <i class="fa-solid fa-desktop calc-icon"></i>
-              <div>
-                <div class="fw-bold">Sistema Web / Dashboard Administrativo</div>
-                <div class="fs-7 text-muted">Painel sob medida para gestão interna e controle.</div>
-              </div>
-            </div>
-
-            <div class="calc-option-card calc-type-card" data-name="Landing Page de Conversão" data-price="1200">
-              <i class="fa-solid fa-rocket calc-icon"></i>
-              <div>
-                <div class="fw-bold">Landing Page de Alta Conversão</div>
-                <div class="fs-7 text-muted">Página focada em captação de leads e vendas.</div>
-              </div>
-            </div>
-
-            <h4 class="mt-4 mb-3 fs-5"><i class="fa-solid fa-sliders text-primary me-2"></i> 2. Adicione Recursos Extras (Opcional)</h4>
-
-            <div class="calc-option-card">
-              <input type="checkbox" class="form-check-input me-2 calc-feature-checkbox" data-name="Banco de Dados MySQL/PostgreSQL" data-price="800" id="chkDb">
-              <label for="chkDb" class="w-100 cursor-pointer">
-                <div class="fw-semibold">Integração com Banco de Dados (MySQL / PostgreSQL)</div>
-                <div class="fs-7 text-muted">Armazenamento estruturado e relacional de dados.</div>
-              </label>
-            </div>
-
-            <div class="calc-option-card">
-              <input type="checkbox" class="form-check-input me-2 calc-feature-checkbox" data-name="Sistema de Login e Permissões" data-price="500" id="chkAuth">
-              <label for="chkAuth" class="w-100 cursor-pointer">
-                <div class="fw-semibold">Autenticação de Usuários &amp; Níveis de Acesso</div>
-                <div class="fs-7 text-muted">Login seguro com controle por perfis.</div>
-              </label>
-            </div>
-          </div>
-
-          <!-- Step 2: Summary Card -->
-          <div class="col-lg-5">
-            <div class="calc-summary-card">
-              <div>
-                <h4 class="fs-5 mb-3"><i class="fa-solid fa-receipt text-secondary me-2"></i> Resumo do Orçamento</h4>
-                <p class="fs-7 text-muted">Estimativa calculada com base na complexidade e tecnologias selecionadas.</p>
-                
-                <hr class="border-secondary my-3">
-                
-                <div class="d-flex justify-content-between fs-7 mb-2">
-                  <span>Recursos Selecionados:</span>
-                  <span class="fw-bold" id="calcFeatureCount">0</span>
-                </div>
-
-                <div class="text-muted fs-7">Valor estimado a partir de:</div>
-                <div class="total-price-display" id="calcTotalPrice">R$ 2.500,00</div>
-                <div class="badge bg-success-subtle text-success border border-success-subtle mb-4">
-                  <i class="fa-solid fa-shield-halved"></i> Garantia de Entrega no Prazo
-                </div>
-              </div>
-
-              <div>
-                <button id="calcSendWhatsapp" class="btn-custom btn-whatsapp w-100 py-3 mb-2 justify-content-center">
-                  <i class="fa-brands fa-whatsapp fs-5"></i> Enviar Proposta no WhatsApp
-                </button>
-                <div class="text-center text-muted fs-7">
-                  <i class="fa-solid fa-lock"></i> Sem compromisso inicial.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       7. WORK PROCESS
-       ========================================================================== -->
-  <section class="section-padding bg-secondary-custom">
-    <div class="container">
-      <div class="text-center section-header">
-        <span class="section-subtitle">Etapas Transparentes</span>
-        <h2 class="section-title">Como Funciona Nosso Processo</h2>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6 col-lg-3">
           <div class="glass-card process-step-card">
             <div class="step-number">1</div>
-            <h4 class="fs-5 mb-2">Briefing &amp; Ideia</h4>
-            <p class="fs-7 text-muted">Entendimento completo dos seus objetivos de negócio e requisitos técnicos.</p>
+            <h4 class="fs-5 mb-2">Requisitos &amp; Negócio</h4>
+            <p class="fs-7 text-muted">Mapeamento detalhado de regras de negócio, conformidades legais (Portaria 671 / LGPD) e arquitetura funcional.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="glass-card process-step-card">
             <div class="step-number">2</div>
-            <h4 class="fs-5 mb-2">Arquitetura &amp; DB</h4>
-            <p class="fs-7 text-muted">Modelagem de banco de dados (MySQL/PostgreSQL) e design visual das telas.</p>
+            <h4 class="fs-5 mb-2">Modelagem &amp; Dados</h4>
+            <p class="fs-7 text-muted">Modelagem relacional estrita (PostgreSQL/Supabase), indexação estratégica e arquitetura de cache em RAM.</p>
           </div>
         </div>
 
@@ -536,102 +454,15 @@
           <div class="glass-card process-step-card">
             <div class="step-number">3</div>
             <h4 class="fs-5 mb-2">Desenvolvimento</h4>
-            <p class="fs-7 text-muted">Construção do código com HTML5, CSS3, JavaScript e Bootstrap com envios de previews.</p>
+            <p class="fs-7 text-muted">Construção do frontend responsivo e microsserviços Node.js com código limpo, seguro e performático.</p>
           </div>
         </div>
 
         <div class="col-md-6 col-lg-3">
           <div class="glass-card process-step-card">
             <div class="step-number">4</div>
-            <h4 class="fs-5 mb-2">Entrega &amp; Suporte</h4>
-            <p class="fs-7 text-muted">Publicação do projeto no servidor e suporte técnico após o lançamento.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       8. CONTACT SECTION
-       ========================================================================== -->
-  <section id="contact" class="section-padding">
-    <div class="container">
-      <div class="row gy-5">
-        <div class="col-lg-5">
-          <div class="glass-card contact-info-card">
-            <span class="section-subtitle">Fale Comigo</span>
-            <h2 class="section-title mb-4">Vamos Construir Sua Solução?</h2>
-            <p class="text-muted mb-4">
-              Disponível para contratações, consultorias de engenharia de software e desenvolvimento de sistemas sob medida.
-            </p>
-
-            <div class="contact-item">
-              <div class="contact-icon-box">
-                <i class="fa-brands fa-whatsapp"></i>
-              </div>
-              <div>
-                <div class="fs-7 text-muted">WhatsApp Direto</div>
-                <a href="https://wa.me/5565999964446?text=Ol%C3%A1%20Mickael!%20Gostaria%20de%20conversar." target="_blank" class="fw-bold text-white text-decoration-none">+55 (65) 99996-4446</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon-box">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
-              <div>
-                <div class="fs-7 text-muted">E-mail Profissional</div>
-                <a href="mailto:gumimds@gmail.com" class="fw-bold text-white text-decoration-none">gumimds@gmail.com</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon-box">
-                <i class="fa-brands fa-linkedin"></i>
-              </div>
-              <div>
-                <div class="fs-7 text-muted">LinkedIn</div>
-                <a href="https://linkedin.com/in/mickael-soares-97755098" target="_blank" class="fw-bold text-white text-decoration-none">in/mickael-soares-97755098</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon-box">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div>
-                <div class="fs-7 text-muted">Localização</div>
-                <div class="fw-bold">Cuiabá / Várzea Grande - MT • Atuação Remota</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-7">
-          <div class="glass-card p-4 p-md-5">
-            <h3 class="fs-4 mb-4">Envie uma Mensagem Direta</h3>
-            
-            <form id="directContactForm">
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="contactName" class="form-label fs-7 fw-semibold">Seu Nome</label>
-                  <input type="text" class="form-control form-control-custom" id="contactName" placeholder="Ex: João da Silva" required>
-                </div>
-                <div class="col-md-6">
-                  <label for="contactEmail" class="form-label fs-7 fw-semibold">Seu E-mail</label>
-                  <input type="email" class="form-control form-control-custom" id="contactEmail" placeholder="joao@empresa.com" required>
-                </div>
-                <div class="col-12">
-                  <label for="contactMessage" class="form-label fs-7 fw-semibold">Conte um pouco sobre a sua demanda ou projeto</label>
-                  <textarea class="form-control form-control-custom" id="contactMessage" rows="5" placeholder="Olá Mickael, precisamos desenvolver um sistema de gestão / oportunidade para desenvolvedor..." required></textarea>
-                </div>
-                <div class="col-12">
-                  <button type="submit" class="btn-custom btn-primary-custom w-100 justify-content-center py-3">
-                    <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem via WhatsApp
-                  </button>
-                </div>
-              </div>
-            </form>
+            <h4 class="fs-5 mb-2">Deploy &amp; Monitoramento</h4>
+            <p class="fs-7 text-muted">Publicação em nuvem com proxy Cloudflare, cold-start interceptor e sustentação contínua de alta disponibilidade.</p>
           </div>
         </div>
       </div>
@@ -645,18 +476,43 @@
   </a>
 
   <!-- ==========================================================================
-       9. FOOTER
+       7. FOOTER / CONTATO
        ========================================================================== -->
-  <footer class="footer-custom text-center">
-    <div class="container">
+  <footer id="contato" class="footer-custom">
+    <div class="container text-center">
+      <div class="mb-4">
+        <h3 class="fs-4 fw-bold mb-2">Vamos Conversar?</h3>
+        <p class="fs-7 text-muted mb-4 mx-auto" style="max-width: 550px;">
+          Estou disponível para novas contratações, projetos sob medida e consultorias técnicas. Entre em contato pelos canais abaixo:
+        </p>
+
+        <!-- Chips de Contato no Rodapé -->
+        <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+          <a href="mailto:gumimds@gmail.com" class="hero-contact-chip">
+            <i class="fa-solid fa-envelope"></i> gumimds@gmail.com
+          </a>
+          <a href="https://linkedin.com/in/mickael-soares-97755098" target="_blank" class="hero-contact-chip">
+            <i class="fa-brands fa-linkedin"></i> linkedin.com/in/mickael-soares-97755098
+          </a>
+          <a href="https://wa.me/5565999964446" target="_blank" class="hero-contact-chip">
+            <i class="fa-brands fa-whatsapp"></i> (65) 99996-4446
+          </a>
+          <span class="hero-contact-chip">
+            <i class="fa-solid fa-location-dot"></i> Cuiabá / Várzea Grande - MT
+          </span>
+        </div>
+      </div>
+
       <p class="fs-7 text-muted mb-3">
         Engenharia Fullstack • Node.js • PostgreSQL • PWA Offline-First • IA Facial • Cloudflare Workers • +10 Anos em TI
       </p>
+
       <div class="d-flex justify-content-center gap-3 mb-4 fs-5 text-muted">
         <a href="https://github.com/tisuportems-Micka" target="_blank" class="hover-primary" title="GitHub Mickael Dias"><i class="fa-brands fa-github"></i></a>
         <a href="https://linkedin.com/in/mickael-soares-97755098" target="_blank" class="hover-primary" title="LinkedIn Mickael Soares"><i class="fa-brands fa-linkedin"></i></a>
         <a href="https://wa.me/5565999964446" target="_blank" class="hover-primary" title="WhatsApp Mickael Dias"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
+
       <div class="fs-7 text-muted border-top border-secondary pt-3" style="border-color: rgba(255,255,255,0.05) !important;">
         &copy; 2026 Mickael Dias Soares. Todos os direitos reservados.
       </div>
