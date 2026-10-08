@@ -6,8 +6,7 @@
   ### **Desenvolvedor de Software Fullstack & Infraestrutura Corporativa**
   **Node.js • JavaScript • PostgreSQL • PWA Offline-First • IA Facial • Cloudflare Workers**
 
-  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mickael-soares-97755098)
-  [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5565999964446)
+  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mickael-s-97755098/)
   [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tisuportems-Micka)
   [![Status](https://img.shields.io/badge/Status-Disponível%20para%20Oportunidades-success?style=for-the-badge)](#contato)
 </div>
@@ -80,8 +79,7 @@ cd meu-portfolio
 
 ## 📬 Contato & Conexões
 
-- 📱 **WhatsApp:** [(65) 99996-4446](https://wa.me/5565999964446)
-- 💼 **LinkedIn:** [linkedin.com/in/mickael-soares-97755098](https://linkedin.com/in/mickael-soares-97755098)
+- 💼 **LinkedIn:** [linkedin.com/in/mickael-s-97755098](https://www.linkedin.com/in/mickael-s-97755098/)
 - ✉️ **E-mail:** [gumimds@gmail.com](mailto:gumimds@gmail.com)
 - 📍 **Localização:** Cuiabá / Várzea Grande, MT — Disponível para atuação remota ou presencial
 
