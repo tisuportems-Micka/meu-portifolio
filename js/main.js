@@ -20,14 +20,16 @@ function initThemeToggle() {
   // Recupera preferência salva ou assume escuro por padrão
   const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
   document.documentElement.setAttribute('data-theme', savedTheme);
+  document.documentElement.setAttribute('data-bs-theme', savedTheme);
   updateThemeIcon(savedTheme, themeIcon);
 
   if (themeBtn) {
     themeBtn.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
       const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       
       document.documentElement.setAttribute('data-theme', newTheme);
+      document.documentElement.setAttribute('data-bs-theme', newTheme);
       localStorage.setItem('portfolio-theme', newTheme);
       updateThemeIcon(newTheme, themeIcon);
     });
