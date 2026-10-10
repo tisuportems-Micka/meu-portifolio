@@ -331,12 +331,13 @@
       <div class="filter-btn-group">
         <button class="filter-btn active" data-filter="all">Todos os Projetos</button>
         <button class="filter-btn" data-filter="systems">Sistemas &amp; SaaS</button>
+        <button class="filter-btn" data-filter="devops">DevOps &amp; Infra</button>
         <button class="filter-btn" data-filter="web">Web &amp; Landing Pages</button>
       </div>
 
       <div class="row g-4">
         <!-- Project 1: PontoSmart -->
-        <div class="col-md-6 col-lg-4 project-item" data-category="systems">
+        <div class="col-md-6 col-lg-6 project-item" data-category="systems">
           <div class="glass-card project-card">
             <div class="project-img-wrapper">
               <img src="assets/project_pontosmart.png" alt="PontoSmart SaaS Ponto Eletrônico e Biometria" class="project-img">
@@ -364,7 +365,7 @@
         </div>
 
         <!-- Project 2: Portal de Chamados -->
-        <div class="col-md-6 col-lg-4 project-item" data-category="systems">
+        <div class="col-md-6 col-lg-6 project-item" data-category="systems">
           <div class="glass-card project-card">
             <div class="project-img-wrapper">
               <img src="assets/project_portal_chamados.png" alt="Portal de Chamados e Helpdesk Corporativo" class="project-img">
@@ -390,8 +391,37 @@
           </div>
         </div>
 
-        <!-- Project 3: Landing Page TI Suporte MS -->
-        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+        <!-- Project 3: Central de Operações & Health Check -->
+        <div class="col-md-6 col-lg-6 project-item" data-category="systems devops">
+          <div class="glass-card project-card">
+            <div class="project-img-wrapper">
+              <img src="assets/project_health_monitor.png" alt="Central de Operações e Painel Health Check TI Suporte MS" class="project-img">
+              <span class="project-badge-cat">DevOps • Observabilidade</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Central de Operações &amp; Health Check</h3>
+              <p class="project-description">
+                Painel unificado de observabilidade, latência e salvaguarda contínua de infraestrutura em nuvem. Inspeção ativa de rotas (Render + Cloudflare), volumetria de bancos (Supabase PostgreSQL) e Cloudflare R2, monitoramento preventivo de SSL e do <strong>Certificado A1 ICP-Brasil (Portaria 671 MTE)</strong>.
+              </p>
+              <div class="project-metrics">
+                <i class="fa-solid fa-heart-pulse"></i> 100% Uptime • Varredura Ativa • Gestão SSL &amp; A1
+              </div>
+              <div class="project-footer">
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="mini-pill">Node.js</span>
+                  <span class="mini-pill">Cloudflare R2</span>
+                  <span class="mini-pill">PostgreSQL</span>
+                  <span class="mini-pill">SQLite WAL</span>
+                  <span class="mini-pill">DevOps</span>
+                  <span class="mini-pill">SSL / A1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Landing Page TI Suporte MS -->
+        <div class="col-md-6 col-lg-6 project-item" data-category="web">
           <div class="glass-card project-card">
             <div class="project-img-wrapper">
               <img src="assets/project_tisuportems.png" alt="TI Suporte MS" class="project-img">

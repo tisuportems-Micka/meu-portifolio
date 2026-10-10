@@ -61,8 +61,9 @@ function initProjectFilters() {
       const filterValue = btn.getAttribute('data-filter');
 
       projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (filterValue === 'all' || category === filterValue) {
+        const category = card.getAttribute('data-category') || '';
+        const matches = filterValue === 'all' || category.split(' ').includes(filterValue);
+        if (matches) {
           card.style.display = 'block';
           setTimeout(() => {
             card.style.opacity = '1';
