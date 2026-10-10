@@ -119,11 +119,8 @@ const projectGalleries = {
       {
         src: 'assets/project_pontosmart.png',
         caption: 'Interface PWA de Marcação de Ponto Facial com Câmera e Geolocalização GPS'
-      },
-      {
-        src: 'assets/project_pontosmart.jpg',
-        caption: 'Painel Administrativo Web — Gestão de Jornadas, Horários e Espelho de Ponto (Portaria 671 MTE)'
       }
+      /* Espaço reservado: adicione novos objetos { src: 'assets/...', caption: '...' } aqui quando desejar subir novas fotos reais */
     ]
   },
   portal_chamados: {
@@ -132,12 +129,9 @@ const projectGalleries = {
     slides: [
       {
         src: 'assets/project_portal_chamados.png',
-        caption: 'Visão Geral do Helpdesk — Central de Chamados em Tempo Real e Triagem de Tickets'
-      },
-      {
-        src: 'assets/project_system.jpg',
-        caption: 'Gestão de Atendimentos — Controle Estrito de SLA, Anexos e Perfis de Acesso'
+        caption: 'Central de Atendimento & Helpdesk — Gestão de Tickets em Tempo Real e Controle de SLA'
       }
+      /* Espaço reservado: adicione novos objetos { src: 'assets/...', caption: '...' } aqui quando desejar subir novas fotos reais */
     ]
   },
   health_monitor: {
