@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initProjectFilters();
   initSmoothScroll();
+  initProjectGalleryModal();
 });
 
 /* ==========================================================================
@@ -105,4 +106,169 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+/* ==========================================================================
+   4. GALERIA DE TELAS DOS PROJETOS (MODAL & CARROSSEL / PASSADOR)
+   ========================================================================== */
+const projectGalleries = {
+  pontosmart: {
+    title: 'PontoSmart — Ponto Eletrônico & IA Facial',
+    category: 'SaaS • Biometria Facial',
+    slides: [
+      {
+        src: 'assets/project_pontosmart.png',
+        caption: 'Interface PWA de Marcação de Ponto Facial com Câmera e Geolocalização GPS'
+      },
+      {
+        src: 'assets/project_pontosmart.jpg',
+        caption: 'Painel Administrativo Web — Gestão de Jornadas, Horários e Espelho de Ponto (Portaria 671 MTE)'
+      }
+    ]
+  },
+  portal_chamados: {
+    title: 'Portal de Chamados & Service Desk',
+    category: 'Helpdesk • Service Desk',
+    slides: [
+      {
+        src: 'assets/project_portal_chamados.png',
+        caption: 'Visão Geral do Helpdesk — Central de Chamados em Tempo Real e Triagem de Tickets'
+      },
+      {
+        src: 'assets/project_system.jpg',
+        caption: 'Gestão de Atendimentos — Controle Estrito de SLA, Anexos e Perfis de Acesso'
+      }
+    ]
+  },
+  health_monitor: {
+    title: 'Central de Operações & Health Check — TI Suporte MS',
+    category: 'DevOps • Observabilidade',
+    slides: [
+      {
+        src: 'assets/project_health_monitor.png',
+        caption: 'Serviços Web & APIs — Monitoramento Ativo de Rotas HTTP, Uptime e Latências em Tempo Real'
+      },
+      {
+        src: 'assets/project_health_storage.png',
+        caption: 'Bancos de Dados & Storage — Volumetria e Cotas em Tempo Real de PostgreSQL (Supabase) e Cloudflare R2'
+      },
+      {
+        src: 'assets/project_health_ssl.png',
+        caption: 'Segurança & Compliance — Inspeção Diária de Certificados SSL/TLS e do Certificado A1 ICP-Brasil (Portaria 671)'
+      }
+    ]
+  },
+  tisuportems: {
+    title: 'Site & Landing Page — TI Suporte MS',
+    category: 'Web • Alta Conversão',
+    slides: [
+      {
+        src: 'assets/project_tisuportems.png',
+        caption: 'Landing Page Corporativa B2B de Alta Conversão com Pontuação Máxima no Google Lighthouse'
+      }
+    ]
+  }
+};
+
+function initProjectGalleryModal() {
+  const modalEl = document.getElementById('projectGalleryModal');
+  if (!modalEl) return;
+
+  const modalTitle = document.getElementById('galleryModalLabel');
+  const modalCategory = document.getElementById('galleryModalCategory');
+  const slidesContainer = document.getElementById('gallerySlides');
+  const indicatorsContainer = document.getElementById('galleryIndicators');
+  const captionEl = document.getElementById('gallerySlideCaption');
+  const counterEl = document.getElementById('gallerySlideCounter');
+  const prevBtn = document.getElementById('galleryPrevBtn');
+  const nextBtn = document.getElementById('galleryNextBtn');
+  const carouselEl = document.getElementById('galleryCarousel');
+
+  const galleryTriggers = document.querySelectorAll('[data-gallery-project]');
+  let currentProjectSlides = [];
+
+  galleryTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const projectId = trigger.getAttribute('data-gallery-project');
+      const project = projectGalleries[projectId];
+      if (!project) return;
+
+      currentProjectSlides = project.slides;
+      modalTitle.textContent = project.title;
+      modalCategory.textContent = project.category;
+
+      slidesContainer.innerHTML = '';
+      indicatorsContainer.innerHTML = '';
+
+      const totalSlides = project.slides.length;
+
+      // Se tiver apenas 1 foto, esconde os botões do passador e os indicadores
+      if (totalSlides <= 1) {
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+        indicatorsContainer.style.display = 'none';
+      } else {
+        prevBtn.style.display = 'flex';
+        nextBtn.style.display = 'flex';
+        indicatorsContainer.style.display = 'flex';
+      }
+
+      project.slides.forEach((slide, idx) => {
+        // Indicador
+        const indicator = document.createElement('button');
+        indicator.type = 'button';
+        indicator.setAttribute('data-bs-target', '#galleryCarousel');
+        indicator.setAttribute('data-bs-slide-to', idx.toString());
+        indicator.setAttribute('aria-label', `Slide ${idx + 1}`);
+        if (idx === 0) {
+          indicator.classList.add('active');
+          indicator.setAttribute('aria-current', 'true');
+        }
+        indicatorsContainer.appendChild(indicator);
+
+        // Slide
+        const slideItem = document.createElement('div');
+        slideItem.className = `carousel-item ${idx === 0 ? 'active' : ''}`;
+        slideItem.innerHTML = `
+          <div class="gallery-carousel-item">
+            <img src="${slide.src}" alt="${slide.caption}" class="img-fluid" loading="lazy">
+          </div>
+        `;
+        slidesContainer.appendChild(slideItem);
+      });
+
+      // Legenda e contador inicial
+      updateCaptionAndCounter(0, totalSlides, project.slides);
+
+      // Instância do Carrossel do Bootstrap
+      const carouselInstance = bootstrap.Carousel.getOrCreateInstance(carouselEl, {
+        interval: false,
+        wrap: true,
+        keyboard: true
+      });
+      carouselInstance.to(0);
+
+      // Abre o Modal do Bootstrap
+      const modalInstance = bootstrap.Modal.getOrCreateInstance(modalEl);
+      modalInstance.show();
+    });
+  });
+
+  if (carouselEl) {
+    carouselEl.addEventListener('slid.bs.carousel', (event) => {
+      if (currentProjectSlides && currentProjectSlides.length > 0) {
+        updateCaptionAndCounter(event.to, currentProjectSlides.length, currentProjectSlides);
+      }
+    });
+  }
+
+  function updateCaptionAndCounter(index, total, slides) {
+    if (captionEl && slides && slides[index]) {
+      captionEl.textContent = slides[index].caption;
+    }
+    if (counterEl) {
+      counterEl.textContent = `${index + 1} de ${total}`;
+    }
+  }
 }
